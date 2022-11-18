@@ -20,22 +20,25 @@ const LocationDropDown = () => {
     <Menu as = 'div' className='relative'>
         <Menu.Button onClick={() => setIsOpen(!isOpen)}>
             <div>
-                <div className='text-[14px] text-left text-gray-500 font-semibold'>{country}</div>
-                <div className='text-left font-bold mt-1'>New York, USA</div>
+            <div className='text-[14px] text-left text-gray-500 font-semibold'>Location</div>
+                <div className='text-left font-bold mt-1'>{country}</div>
                 {isOpen ? (
-                    <RiArrowUpSLine className='absolute text-violet-700 text-xl left-36 bottom-4'/>
+                    <RiArrowDownSLine className='absolute text-violet-700 text-xl left-48 bottom-4'/>
                 ) : (
-                    <RiArrowDownSLine className='absolute text-violet-700 text-xl left-36 bottom-4'/>
+                    <RiArrowUpSLine className='absolute text-violet-700 text-xl left-48 bottom-4'/>
                 )}
             </div>
         </Menu.Button>
 
-        <Menu.Items>
+        <Menu.Items className='w-[220%] text-center py-8 text-[15px] space-y-6 shadow-md bg-white absolute left-[-2.5rem] z-10 list-none rounded-b-lg'>
             {countries.map((country, index) => {
                 return (
                     <Menu.Item
                      onClick={() => setCountry(country)}
-                     as='li' className= 'cursor-pointer hover:text-violet-700 transition' key={index} value={country}> 
+                     as='li' className= 'cursor-pointer hover:text-violet-700 transition' key={index}> 
+                        
+                        {country}
+
                     </Menu.Item>
                 )
             })}

@@ -16,7 +16,30 @@ const HouseContextProvider = ({ children }) => {
    const [loading, setLoading] = useState(false);
 
    //return all countries
-   
+   useEffect(() => {
+    const allCountries = houses.map((house) => {
+        return house.country;
+    });
+    const uniqueCountries = ['(Any)', ...new Set(allCountries)];
+
+    //set the countries state
+    setCountries(uniqueCountries);
+   }, []);
+
+   //return all property type
+   useEffect(() => {
+    const allProperties = houses.map((house) => {
+        return house.type;
+    });
+    const uniqueProperties = ['(Any)', ...new Set(allProperties)];
+    
+    // set the properties state
+    setProperties(uniqueProperties);
+   }, []);
+
+   const handleClick = () => {
+    console.log('clicked');
+   }
    return (
     <HouseContext.Provider value = {{
         country,
@@ -31,6 +54,7 @@ const HouseContextProvider = ({ children }) => {
         setDate,
         houses,
         loading,
+        handleClick,
       }}
       >
       {children}
