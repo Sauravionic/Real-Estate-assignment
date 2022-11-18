@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 import Logo from '../assets/img/logo.svg';
 const Header = () => {
   return (
-    <header className='py-6 px-10 mb-12 border-b'>
+    <header className='py-6 px-10 mb-12 border-b bg-white'>
         <div className='flex justify-between items-center'>
 
             {/* logo */}
