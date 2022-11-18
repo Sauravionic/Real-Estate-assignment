@@ -15,6 +15,9 @@ const PriceDropDown = () => {
 
   const prices = [
     {
+        value: 'Price Range - (Any)'
+    },
+    {
         value : '$10000 - $30000',
     },
     {

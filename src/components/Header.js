@@ -3,7 +3,7 @@ import React from 'react'
 //import link
 import {Link} from 'react-router-dom';
 //import logo
-import Logo from '../assets/img/logo.svg';
+import Logo from '../assets/img/logo.png';
 const Header = () => {
   return (
     <header className='py-6 px-10 mb-12 border-b bg-white'>
@@ -11,16 +11,16 @@ const Header = () => {
 
             {/* logo */}
             <Link to='/'>
-                <img src={Logo} alt = 'Logo'></img>
+                <img className='w-[100%] h-[100%]' src={Logo} alt = 'Logo'></img>
             </Link>
 
             {/* Middle Buttons */}
-            <div className='flex items-center gap-16 text-md'>
-                <Link to='/'>Rent</Link>
-                <Link to='/'>Buy</Link>
-                <Link to='/'>Sell</Link>
-                <Link to='/'>Manage Property</Link>
-                <Link to='/'>Resources</Link>
+            <div className='flex items-center gap-8 text-md'>
+                <Link className='px-3 py-1 hover:border-solid hover:border hover:rounded-lg hover:ring-offset-0 hover:text-violet-800 hover:bg-violet-200' to='/'>Rent</Link>
+                <Link className='px-3 py-1 hover:border-solid hover:border hover:rounded-lg hover:ring-offset-0 hover:text-violet-800 hover:bg-violet-200' to='/'>Buy</Link>
+                <Link className='px-3 py-1 hover:border-solid hover:border hover:rounded-lg hover:ring-offset-0 hover:text-violet-800 hover:bg-violet-200' to='/'>Sell</Link>
+                <Link className='px-3 py-1 hover:border-solid hover:border hover:rounded-lg hover:ring-offset-0 hover:text-violet-800 hover:bg-violet-200' to='/'>Manage Property</Link>
+                <Link className='px-3 py-1 hover:border-solid hover:border hover:rounded-lg hover:ring-offset-0 hover:text-violet-800 hover:bg-violet-200' to='/'>Resources</Link>
             </div>
 
             {/* Login & Signup Buttons */}

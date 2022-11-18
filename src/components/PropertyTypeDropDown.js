@@ -11,7 +11,6 @@ import { HouseContext } from './HouseContext';
 
 const PropertyTypeDropDown = () => {
   const {property, setProperty, properties} = useContext(HouseContext);
-  console.log(properties);
   const [isOpen, setIsOpen] = useState(false);
 
 

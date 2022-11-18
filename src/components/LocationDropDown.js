@@ -11,8 +11,6 @@ import { HouseContext } from './HouseContext';
 
 const LocationDropDown = () => {
   const {country, setCountry, countries} = useContext(HouseContext);
-  
-  console.log(countries);
   const [isOpen, setIsOpen] = useState(false);
 
 
@@ -20,7 +18,7 @@ const LocationDropDown = () => {
     <Menu as = 'div' className='relative'>
         <Menu.Button onClick={() => setIsOpen(!isOpen)}>
             <div>
-            <div className='text-[14px] text-left text-gray-500 font-semibold'>Location</div>
+                <div className='text-[14px] text-left text-gray-500 font-semibold'>Location</div>
                 <div className='text-left font-bold mt-1'>{country}</div>
                 {isOpen ? (
                     <RiArrowDownSLine className='absolute text-violet-700 text-xl left-48 bottom-4'/>

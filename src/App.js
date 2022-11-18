@@ -1,5 +1,3 @@
-import logo from '../src/assets/img/logo.svg';
-
 //import Routes & Route from React-Router-Dom
 import { Routes, Route } from 'react-router-dom';
 
